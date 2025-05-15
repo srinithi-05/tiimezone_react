@@ -31,7 +31,7 @@ function App() {
     if (!selectedTimezone) return;
 
     const fetchTime = () => {
-      axios.get(`https://localhost:7005/api/time`, {
+      axios.get(`https://datetime.runasp.net/api/time`, {
         params: { timezone: selectedTimezone }
       })
       .then(response => setSelectedTime(response.data.selectedTime))
