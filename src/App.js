@@ -9,7 +9,8 @@ function App() {
 
   // Fetch available timezones from the backend on mount
   useEffect(() => {
-    axios.get('https://localhost:7005/api/time/timezones')
+    // axios.get('https://localhost:7005/api/time/timezones')
+    axios.get('https://datetime.runasp.net/api/time/timezones')
       .then(response => {
         setTimezones(response.data);
         setSelectedTimezone(response.data[0]); // auto-select first timezone
